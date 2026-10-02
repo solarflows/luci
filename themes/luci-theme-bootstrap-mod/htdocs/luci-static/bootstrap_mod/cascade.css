@@ -1438,6 +1438,11 @@ body.modal-overlay-active #modal_overlay>.modal {
     border-width: 2px 0;
 }*/
 
+/* fix modal_overlay background is transparent what caused poor reading experience */
+.modal { 
+    background: #ffffff; /* 或其他您需要的颜色 */
+}
+
 .modal>* {
     flex-basis: 100%;
     /* line-height: normal; */
