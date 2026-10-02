@@ -8819,3 +8819,824 @@ msgstr "只适合 802.11n 2.4Ghz"
 #~ "em>字段的值将被固定分配给 <em>MAC 地址</em>字段标识的主机，<em>租期</em>是"
 #~ "一个可选字段，可为每个主机单独设定 DHCP 租期的时长，例如：12h、3d、"
 #~ "infinite，分别表示 12 小时、3 天、永久。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:365
+msgid ""
+"Dnsmasq is a lightweight <abbr title=\"Dynamic Host Configuration "
+"Protocol\">DHCP</abbr> server and <abbr title=\"Domain Name System\">DNS</"
+"abbr> forwarder."
+msgstr ""
+"Dnsmasq 是轻量级的 <abbr title=\"Dynamic Host Configuration Protocol（动态主"
+"机配置协议）\">DHCP</abbr> 服务器和 <abbr title=\"Domain Name System（域名系"
+"统）\">DNS</abbr> 转发器。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:388
+msgid "General"
+msgstr "常规"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:420
+msgid "Authoritative"
+msgstr "唯一授权"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:421
+msgid "This is the only DHCP server in the local network."
+msgstr "这是本地网络中唯一的 DHCP 服务器。"
+
+msgid "DNS redirect"
+msgstr "DNS 重定向"
+
+msgid "Force redirect all local DNS queries to DNSMasq, a.k.a. DNS Hijacking."
+msgstr "强制将所有本地 DNS 查询重定向到 DNSMasq，即 DNS 劫持。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:424
+msgid "Resolve these locally"
+msgstr "本地解析这些项目"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:425
+msgid ""
+"Never forward these matching domains or subdomains; resolve from DHCP or "
+"hosts files only."
+msgstr "永不转发这些匹配的域名或子域名；只从 DHCP 或 hosts 文件进行解析。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:429
+msgid "Local domain"
+msgstr "本地域名"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:434
+msgid "Add local domain suffix to names served from hosts files."
+msgstr "为 HOSTS 文件中的主机名添加本地域名后缀。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:430
+msgid "Local domain suffix appended to DHCP names and hosts file entries."
+msgstr "向 DHCP 名称和 hosts 文件条目追加本地域名后缀。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:477
+#: protocols/luci-proto-wireguard/htdocs/luci-static/resources/protocol/wireguard.js:795
+msgid "Addresses"
+msgstr "地址"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:478
+msgid "Resolve specified FQDNs to an IP."
+msgstr "此列表将域名强制指向某个 IP 地址。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:955
+msgid "Syntax:"
+msgstr "语法："
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:479
+msgid "Syntax: {code_syntax}."
+msgstr "语法: {code_syntax}。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:484
+msgctxt "hint: <code>/#/</code> matches any domain (and returns NXDOMAIN)."
+msgid "{any_domain} matches any domain (and returns {nxdomain})."
+msgstr "{any_domain} 匹配任意域名 (并返回 {nxdomain})。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:488
+msgctxt ""
+"hint: <code>/example.com/#</code> returns NULL addresses (<code>0.0.0.0</"
+"code>, <code>::</code>) for example.com and its subdomains."
+msgid ""
+"{example_null} returns {null_addr} addresses ({null_ipv4}, {null_ipv6}) for "
+"{example_com} and its subdomains."
+msgstr ""
+"{example_null} 返回 {null_addr} 地址 ({null_ipv4}、 {null_ipv6}) ，对象为 "
+"{example_com} 及其子域名。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:481
+msgctxt "hint: <code>/example.com/</code> returns <code>NXDOMAIN</code>."
+msgid "{example_nx} returns {nxdomain}."
+msgstr "{example_nx} 返回 {nxdomain}。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:399
+msgid "IP Sets"
+msgstr "IP 集"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:503
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:1175
+msgid ""
+"List of IP sets to populate with the IPs of DNS lookup results of the FQDNs "
+"also specified here."
+msgstr ""
+"IP 集列表用于存储根据指定完全限定域名（FQDN）进行 DNS 查找后获得的 IP 地址。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:674
+msgid "Allocate IPs sequentially"
+msgstr "顺序分配 IP"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:675
+msgid ""
+"Allocate IP addresses sequentially, starting from the lowest available "
+"address."
+msgstr "从最低可用地址开始顺序分配 IP 地址。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:772
+msgid "All servers"
+msgstr "所有服务器"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:773
+msgid "Query all available upstream resolvers."
+msgstr "查询所有可用的上游解析器。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:773
+msgid "First answer wins."
+msgstr "以首个应答为准。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:389
+msgid "Cache"
+msgstr "缓存"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:404
+msgid "Cache arbitrary RR"
+msgstr "缓存任意的资源记录"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:404
+msgid "By default, dnsmasq caches A, AAAA, CNAME and SRV DNS record types."
+msgstr "默认情况下，dnsmasq 会缓存A，AAAA，CNAME和 SRV 类型的 DNS 记录。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:405
+msgid "This option adds additional record types to the cache."
+msgstr "这个选项将额外的记录类型添加到缓存中。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:390
+msgid "Devices &amp; Ports"
+msgstr "设备及端口"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:538
+msgid "Non-wildcard"
+msgstr "非全部地址"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:539
+msgid ""
+"Bind only to configured interface addresses, instead of the wildcard address."
+msgstr "只绑定到配置好的接口地址，而不是通配地址。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:545
+msgid "Listen interfaces"
+msgstr "监听接口"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:546
+msgid ""
+"Listen only on the specified interfaces, and loopback if not excluded "
+"explicitly."
+msgstr "仅监听这些接口和环回接口。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:551
+msgid "Exclude interfaces"
+msgstr "排除接口"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:552
+msgid "Do not listen on the specified interfaces."
+msgstr "不监听这些接口。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:784
+msgid "DNS server port"
+msgstr "DNS 服务器端口"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:785
+msgid "Listening port for inbound DNS queries."
+msgstr "入站 DNS 查询的侦听端口。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:791
+msgid "DNS query port"
+msgstr "DNS 查询端口"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:798
+msgid "Minimum source port #"
+msgstr "最小源端口 #"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:799
+msgid "Min valid value %s."
+msgstr "最小有效值 %s。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:799
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:807
+msgid "Useful for systems behind firewalls."
+msgstr "对防火墙后面的系统有用。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:806
+msgid "Maximum source port #"
+msgstr "最大源端口 #"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:807
+msgid "Max valid value %s."
+msgstr "最大有效值 %s。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:391
+msgid "DNS Records"
+msgstr "DNS 记录"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:935
+msgid "Hostnames"
+msgstr "主机名映射"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:1029
+msgid ""
+"Hostnames are used to bind a domain name to an IP address. This setting is "
+"redundant for hostnames already configured with static leases, but it can be "
+"useful to rebind an FQDN."
+msgstr ""
+"主机名用于将域名与 IP 地址绑定。对于已经配置了静态租约的主机名，此设置多余，"
+"但它对重新绑定 FQDN 可能有用。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:936
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:955
+msgid "SRV"
+msgstr "SRV"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:942
+msgid ""
+"Bind service records to a domain name: specify the location of services. See "
+"<a href=\"%s\">RFC2782</a>."
+msgstr "绑定服务记录到域名：指定服务的位置。见 <a href=\"%s\">RFC2782</a>。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:943
+msgid ""
+"_service: _sip, _ldap, _imap, _stun, _xmpp-client, … . (Note: while _http is "
+"possible, no browsers support SRV records.)"
+msgstr ""
+"_service: _sip, _ldap, _imap, _stun, _xmpp-client, … . （注：虽然 _http 有可"
+"能，但没有浏览器支持 SRV 记录。）"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:944
+msgid "_proto: _tcp, _udp, _sctp, _quic, … ."
+msgstr "_proto: _tcp, _udp, _sctp, _quic, … ."
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:945
+msgid "You may add multiple records for the same Target."
+msgstr "你可以为同一目标添加多条记录。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:946
+msgid ""
+"Larger weights (of the same prio) are given a proportionately higher "
+"probability of being selected."
+msgstr "较大的权重（相同的优先级下）被赋予相应较高的被选中概率。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:960
+msgid "CNAME or fqdn"
+msgstr "CNAME 或 fqdn"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:970
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:1002
+msgid "Ordinal: lower comes first."
+msgstr "序数：较低的优先。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:937
+msgid "MX"
+msgstr "MX"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:981
+msgid ""
+"Bind service records to a domain name: specify the location of services."
+msgstr "绑定服务记录到域名：指定服务的位置。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:982
+msgid "You may add multiple records for the same domain."
+msgstr "你可以为同一个域添加多条记录。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:1008
+msgid "Set an alias for a hostname."
+msgstr "为主机名设置别称。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:939
+msgid "DNS-RR"
+msgstr "DNS资源记录"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:1059
+msgid "Set an arbitrary resource record (RR) type."
+msgstr "设置任意的资源记录（RR）类型。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:1060
+msgid "Hexdata is automatically en/decoded on save and load"
+msgstr "Hexdata 在保存和加载时会自动进行编码和解码"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:1092
+msgid "Resource Record Name"
+msgstr "资源记录名称"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:1097
+msgid "Resource Record Number"
+msgstr "资源记录编号"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:1111
+msgid "Hex Data"
+msgstr "十六进制数据"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:392
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:719
+msgid "DNSSEC"
+msgstr "DNSSEC"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:720
+msgid ""
+"Validate DNS replies and cache DNSSEC data, requires upstream to support "
+"DNSSEC."
+msgstr "验证 DNS 应答和缓存 DNSSEC 数据，需要上游支持 DNSSEC。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:724
+msgid "DNSSEC check unsigned"
+msgstr "DNSSEC 检查未签名"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:725
+msgid "Verify unsigned domain responses really come from unsigned domains."
+msgstr "验证未签名的域名响应确实来自未签名的域名。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:920
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:393
+msgid "Filter"
+msgstr "过滤器"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:415
+msgid "Domain required"
+msgstr "忽略空域名解析"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:416
+msgid "Never forward DNS queries which lack dots or domain parts."
+msgstr "永不转发缺少点或域名部分的 DNS 查询。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:417
+msgid "Names not in {etc_hosts} are answered {not_found}."
+msgstr "查询不在 {etc_hosts} 中的主机，应答将是 {not_found}。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:508
+msgid "Rebind protection"
+msgstr "重绑定保护"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:509
+msgid "Discard upstream responses containing {rfc_1918_link} addresses."
+msgstr "丢弃包含 {rfc_1918_link} 地址的上游响应。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:510
+msgid ""
+"Discard also upstream responses containing {rfc_4193_link}, Link-Local and "
+"private IPv4-Mapped {rfc_4291_link} IPv6 Addresses."
+msgstr ""
+"同时丢弃包含 {rfc_4193_link}、链路本地地址和私有 IPv4 映射 {rfc_4291_link} "
+"IPv6 地址的上游响应。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:532
+msgid "Local service only"
+msgstr "仅本地服务"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:533
+msgid "Accept DNS queries only from hosts whose address is on a local subnet."
+msgstr "仅在网卡所属的子网中提供 DNS 服务。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:679
+msgid "Filter private"
+msgstr "过滤本地包"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:681
+msgid ""
+"Reject reverse lookups to {rfc_6303_link} IP ranges ({reverse_arpa}) not in "
+"{etc_hosts}."
+msgstr ""
+"拒绝反向查询不在 {etc_hosts} 中的 {rfc_6303_link} IP 段 ({reverse_arpa})。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:686
+msgid "Filter SRV/SOA service discovery"
+msgstr "过滤 SRV/SOA 服务发现"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:687
+msgid ""
+"Filters SRV/SOA service discovery, to avoid triggering dial-on-demand links."
+msgstr "过滤 SRV/SOA 服务发现，以避免触发按需拨号链接。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:688
+msgid "May prevent VoIP or other services from working."
+msgstr "可能造成 VoIP 或其他服务无法运作。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:691
+msgid "Filter IPv6 AAAA records"
+msgstr "过滤 IPv6 AAAA 记录"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:692
+msgid "Remove IPv6 addresses from the results and only return IPv4 addresses."
+msgstr "从结果中删除 IPv6 地址，只返回 IPv4 地址。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:693
+msgid ""
+"Can be useful if ISP has IPv6 nameservers but does not provide IPv6 routing."
+msgstr "如果你的 ISP 有 IPv6 名称服务器但不提供 IPv6 路由，本选项可能会有用。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:697
+msgid "Filter IPv4 A records"
+msgstr "过滤 IPv4 A 记录"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:698
+msgid "Remove IPv4 addresses from the results and only return IPv6 addresses."
+msgstr "从结果中删除 IPv4 地址，只返回 IPv6 地址。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:702
+msgid "Filter arbitrary RR"
+msgstr "过滤任意的资源记录"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:702
+msgid "Removes records of the specified type(s) from answers."
+msgstr "从应答中移除指定类型的记录。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:712
+msgid "Localise queries"
+msgstr "本地化查询"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:713
+msgid ""
+"Limit response records (from {etc_hosts}) to those that fall within the "
+"subnet of the querying interface."
+msgstr "对于（ {etc_hosts}），只记录落在查询接口子网内的响应记录。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:714
+msgid "This prevents unreachable IPs in subnets not accessible to you."
+msgstr "这防止你无法访问子网中不可抵达的 IP。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:715
+msgid "Note: IPv4 only."
+msgstr "注：仅 IPv4。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:731
+msgid "No negative cache"
+msgstr "禁用无效信息缓存"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:732
+msgid "Do not cache negative replies, e.g. for non-existent domains."
+msgstr "不缓存无用的回应，例如：不存在的域名。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:777
+msgid "IPs to override with {nxdomain}"
+msgstr "忽略虚假空域名解析"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:778
+msgid ""
+"Transform replies which contain the specified addresses or subnets into "
+"{nxdomain} responses."
+msgstr "将包含指定地址或子网的响应转换为 {nxdomain} 响应。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:394
+msgid "Forwards"
+msgstr "转发"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:470
+msgid "DNS Forwards"
+msgstr "DNS 转发"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:471
+msgid "Forward specific domain queries to specific upstream servers."
+msgstr "将特定域名的查询转发到特定的上游服务器。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:735
+msgid "Additional servers file"
+msgstr "额外的 SERVERS 文件"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:736
+msgid ""
+"File listing upstream resolvers, optionally domain-specific, e.g. "
+"{servers_file_entry01}, {servers_file_entry02}."
+msgstr ""
+"列出上游解析器的文件，可以特定于域名，比如 {servers_file_entry01}，"
+"{servers_file_entry02}。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:741
+msgid "Add requestor MAC"
+msgstr "添加请求者 MAC 地址"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:742
+msgid ""
+"Add the MAC address of the requestor to DNS queries which are forwarded "
+"upstream."
+msgstr "将请求者的 MAC 地址添加到向上游转发的 DNS 查询中。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:743
+msgid "%s uses the default MAC address format encoding"
+msgstr "%s 使用默认的 MAC 地址格式编码"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:744
+msgid "%s uses an alternative encoding of the MAC as base64"
+msgstr "%s 使用 Base64 作为 MAC 地址的替代编码"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:745
+msgid "%s uses a human-readable encoding of hex-and-colons"
+msgstr "%s 使用可读的十六进制和冒号编码形式"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:753
+msgid "Remove MAC address before forwarding query"
+msgstr "在转发查询之前移除 MAC 地址"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:754
+msgid ""
+"Remove any MAC address information already in downstream queries before "
+"forwarding upstream."
+msgstr "在转发到上游之前，移除下游查询中已有的任何 MAC 地址信息。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:757
+msgid "Add subnet address to forwards"
+msgstr "在转发请求时添加子网地址"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:758
+msgid ""
+"Add a subnet address to the DNS queries which are forwarded upstream, "
+"leaving this value empty disables the feature."
+msgstr ""
+"将 DNS 查询中的子网地址附加到向上游转发的查询中，将此值留空则禁用此功能。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:759
+msgid ""
+"If an address is specified in the flag, it will be used, otherwise, the "
+"address of the requestor will be used."
+msgstr "如果在标志中指定了地址，那么将使用该地址，否则将使用请求者的地址。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:760
+msgid ""
+"The amount of the address forwarded depends on the prefix length parameter: "
+"32 (128 for IPv6) forwards the whole address, zero forwards none of it but "
+"still marks the request so that no upstream nameserver will add client "
+"address information either."
+msgstr ""
+"转发的地址数量取决于前缀长度参数：对于 IPv4，32 表示转发整个地址，对于 IPv6，"
+"128 表示转发整个地址；而设置为 0 则不转发任何地址信息，但仍然标记请求，使得上"
+"游名称服务器也不会添加客户端地址信息。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:761
+msgid "The default (%s) is zero for both IPv4 and IPv6."
+msgstr "默认值（%s）对于 IPv4 和 IPv6 都是 0。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:762
+msgid ""
+"%s adds the /24 and /96 subnets of the requestor for IPv4 and IPv6 "
+"requestors, respectively."
+msgstr "%s 为 IPv4 请求者添加其 /24 子网，并为 IPv6 请求者添加其 /96 子网。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:763
+msgid "%s adds 1.2.3.0/24 for IPv4 requestors and ::/0 for IPv6 requestors."
+msgstr ""
+"%s 为 IPv4 请求者添加 1.2.3.0/24 子网，并为 IPv6 请求者添加 ::/0 子网。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:764
+msgid "%s adds 1.2.3.0/24 for both IPv4 and IPv6 requestors."
+msgstr "%s 为 IPv4 和 IPv6 请求者都添加 1.2.3.0/24 子网。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:768
+msgid "Remove subnet address before forwarding query"
+msgstr "在转发查询之前移除子网地址"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:769
+msgid ""
+"Remove any subnet address already present in a downstream query before "
+"forwarding it upstream."
+msgstr "在转发到上游之前，移除下游查询中已存在的任何子网地址信息。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:395
+msgid "Limits"
+msgstr "限制"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:814
+msgid "Max. DHCP leases"
+msgstr "最大 DHCP 租期"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:815
+msgid "Maximum allowed number of active DHCP leases."
+msgstr "允许的最大 DHCP 租约数。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:821
+msgid "Max. EDNS0 packet size"
+msgstr "最大 EDNS0 数据包大小"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:822
+msgid "Maximum allowed size of EDNS0 UDP packets."
+msgstr "EDNS0 UDP 数据包的最大允许大小。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:828
+msgid "Max. concurrent queries"
+msgstr "最大并发查询数"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:829
+msgid "Maximum allowed number of concurrent DNS queries."
+msgstr "允许的最大并发 DNS 查询数。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:842
+msgid "Min cache TTL"
+msgstr "最小缓存 TTL"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:843
+msgid ""
+"Extend short TTL values to the seconds value given when caching them. Use "
+"with caution."
+msgstr "缓存时延长短 TTL 值到给定的秒数。小心使用。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:849
+msgid "Max cache TTL"
+msgstr "最大缓存 TTL"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:850
+msgid "Set a maximum seconds TTL value for entries in the cache."
+msgstr "为缓存中的条目设置最大 TTL 秒数。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:396
+msgid "Log"
+msgstr "日志"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:437
+msgid "Log queries"
+msgstr "记录查询日志"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:438
+msgid "Write received DNS queries to syslog."
+msgstr "将收到的 DNS 查询写入系统日志。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:442
+msgid "Extra DHCP logging"
+msgstr "额外 DHCP 记录"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:443
+msgid ""
+"Log all options sent to DHCP clients and the tags used to determine them."
+msgstr "记录发送给 DHCP 客户端的所有选项以及用于确定这些选项的标签。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:447
+msgid "Log facility"
+msgstr "记录设施"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:448
+msgid "Set log class/facility for syslog entries."
+msgstr "为系统日志条目设置日志类别/日志设施。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:668
+msgid "Suppress logging"
+msgstr "不记录日志"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:669
+msgid "Suppress logging of the routine operation for the DHCP protocol."
+msgstr "禁止记录 DHCP 协议的日常操作。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:397
+msgid "Resolv &amp; Hosts Files"
+msgstr "Resolv 和 Hosts 文件"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:626
+msgid "Use {etc_ethers}"
+msgstr "使用 {etc_ethers} 配置"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:627
+msgid "Read {etc_ethers} to configure the DHCP server."
+msgstr "读取 {etc_ethers} 来配置 DHCP 服务器。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:631
+msgid "Lease file"
+msgstr "租约文件"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:632
+msgid "File to store DHCP lease information."
+msgstr "存储 DHCP 租约信息的文件。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:635
+msgid "Ignore resolv file"
+msgstr "忽略解析文件"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:656
+msgid "Resolv file"
+msgstr "解析文件"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:657
+msgid "File with upstream resolvers."
+msgstr "上游解析器文件。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:646
+msgid "Strict order"
+msgstr "严谨查序"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:647
+msgid "Query upstream resolvers in the order they appear in the resolv file."
+msgstr "按照上游解析器出现在 resolv 文件中的顺序对它们进行查询操作。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:651
+msgid "Ignore hosts files directory"
+msgstr "忽略主机文件目录"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:652
+msgid "On: use instance specific hosts file only"
+msgstr "开启：仅使用特定实例的主机文件"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:653
+msgid ""
+"Off: use all files in the directory including the instance specific hosts "
+"file"
+msgstr "关闭：使用目录中的所有文件，包括特定实例的主机文件"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:658
+msgid "Ignore {etc_hosts} file"
+msgstr "忽略 {etc_hosts} 文件"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:663
+msgid "Additional hosts files"
+msgstr "额外的 HOSTS 文件"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:398
+msgid "Static Leases"
+msgstr "静态地址分配"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:1215
+msgid ""
+"Static leases are used to assign fixed IP addresses and symbolic hostnames "
+"to DHCP clients. They are also required for non-dynamic interface "
+"configurations where only hosts with a corresponding lease are served."
+msgstr ""
+"静态租约用于给 DHCP 客户端分配固定的 IP 地址和主机标识。只有指定的主机才能连"
+"接，并且接口须为非动态配置。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:1216
+msgid ""
+"Use the <em>Add</em> Button to add a new lease entry. The <em>MAC address</"
+"em> identifies the host, the <em>IPv4 address</em> specifies the fixed "
+"address to use, and the <em>Hostname</em> is assigned as a symbolic name to "
+"the requesting host. The optional <em>Lease time</em> can be used to set non-"
+"standard host-specific lease time, e.g. 12h, 3d or infinite."
+msgstr ""
+"使用 <em>添加</em> 按钮来增加新的租约条目。<em>IPv4 地址</em> 和 <em>主机名</"
+"em> 字段的值将被固定分配给 <em>MAC 地址</em> 字段标识的主机，<em>租期</em> 是"
+"一个可选字段，可为每个主机单独设定 DHCP 租期的时长，例如：12h、3d、infinite，"
+"分别表示 12 小时、3 天、永久。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:1217
+msgid ""
+"The tag construct filters which host directives are used; more than one tag "
+"can be provided, in this case the request must match all of them. Tagged "
+"directives are used in preference to untagged ones. Note that one of mac, "
+"duid or hostname still needs to be specified (can be a wildcard)."
+msgstr ""
+"标签用于筛选所用的主机目录；可以提供多个标签，但这种情况下，请求必须匹配所有"
+"标签。有标签目录的使用优先级高于没有标签的目录。请注意，你仍需指定 mac、duid "
+"和主机名三者中的一个 (可以是一个通配符)。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:1244
+msgid "MAC address(es)"
+msgstr "MAC 地址"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:1316
+msgid "IPv6-Suffix (hex)"
+msgstr "IPv6 后缀（16 进制）"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:1321
+msgid "Tag"
+msgstr "标签"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:1325
+msgid "Match Tag"
+msgstr "匹配标签"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:503
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:1175
+msgid ""
+"List of IP sets to populate with the IPs of DNS lookup results of the FQDNs "
+"also specified here."
+msgstr ""
+"IP 集列表用于存储根据指定完全限定域名（FQDN）进行 DNS 查找后获得的 IP 地址。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:1176
+msgid "The netfilter components below are only regarded when running fw4."
+msgstr "下方 netfilter 组件只有在运行 fw4 时才相关。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:558
+msgid "Relay DHCP requests elsewhere. OK: v4↔v4, v6↔v6. Not OK: v4↔v6, v6↔v4."
+msgstr ""
+"将 DHCP 请求转发到其他地方。可以是：v4↔v4，v6↔v6。不可以是：v4↔v6，v6↔v4。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:559
+msgid ""
+"Note: you may also need a DHCP Proxy (currently unavailable) when specifying "
+"a non-standard Relay To port(<code>addr#port</code>)."
+msgstr ""
+"注意：当指定非标准的 RelayTo 端口 (<code>addr#port</code>) 时，您可能还需要一"
+"个 DHCP 代理 (目前不可用)。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:577
+msgid "You may add multiple unique Relay To on the same Listen addr."
+msgstr "你可以在同一个监听地址上添加多个唯一的转发目标。"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:570
+msgid "Relay from"
+msgstr "中继来源"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:590
+msgid "Relay to address"
+msgstr "中继目标地址"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:620
+msgid "Only accept replies via"
+msgstr "只接受来自下列地址的响应"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:381
+msgctxt "Dnsmasq instance"
+msgid "New instance name…"
+msgstr "新实例名称…"
+
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:353
+msgctxt "Dnsmasq instance"
+msgid "Add server instance"
+msgstr "添加服务器实例"
+
+#: protocols/luci-proto-ipv6/htdocs/luci-static/resources/protocol/dhcpv6.js:32
+msgid "Do not send a Release when restarting"
+msgstr "重启时不要发送 Release"
+
+#: protocols/luci-proto-ipv6/htdocs/luci-static/resources/protocol/dhcpv6.js:23
+msgid "Request IPv6-prefix of length"
+msgstr "请求指定长度的 IPv6 前缀"
